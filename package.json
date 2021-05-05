@@ -1,5 +1,5 @@
 {
-  "name": "Huebner-Giessen-Pruefdatenbank-Testautomatisierung",
+  "name": "Meine-Cucumber-Testautomatisierung",
   "version": "4.0.0",
   "license": "MIT",
   "description": "Verwendung der Protractor, Typescript und Cucumber für die Testautomatisierung auf dem Webportal",
