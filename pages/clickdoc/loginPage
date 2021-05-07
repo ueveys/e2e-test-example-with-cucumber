@@ -1,0 +1,30 @@
+import { element, by, ElementFinder } from 'protractor';
+
+export class LoginPopup {
+
+   public iconClose: ElementFinder;
+   public inputMail: ElementFinder;
+   public inputPassword: ElementFinder;
+   public btnPasswordForgot: ElementFinder;
+   public btnRegister: ElementFinder;
+   public btnLogin: ElementFinder;
+   public hinweisFalschePassword: ElementFinder;
+   public hinweismeldungEmail: ElementFinder;
+   public btnJetztRegistirieren: ElementFinder;
+   public hinweisFehlendePassword: ElementFinder;
+  
+   constructor() {
+   this.iconClose = element(by.xpath("//span[@class='iframe-dialog-close icon icon-CO_close']"));
+   this.inputMail = element(by.xpath("//input[@id='mat-input-1']"));
+   this.inputPassword = element(by.xpath("//input[@id='mat-input-2']"));
+   this.btnPasswordForgot = element(by.xpath("//a[@data-web-test='login_forgot_password']"));
+   this.btnRegister = element(by.xpath("//button[@data-web-test='login_register_btn']"));
+   this.btnLogin = element(by.xpath("//button[@class='life-primary-btn']"));
+   this.hinweisFalschePassword = element(by.xpath("//app-error-message//p[@class='mt-0']"));
+   this.hinweismeldungEmail = element(by.css(".error-container"));
+   this.btnJetztRegistirieren = element(by.xpath("//button[@class='life-primary-btn' and contains(text(),'Jetzt registrieren')]"));
+   this.hinweisFehlendePassword = element(by.css("#mat-error-1"));
+    }
+  
+ 
+}

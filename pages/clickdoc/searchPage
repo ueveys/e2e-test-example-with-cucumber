@@ -1,0 +1,81 @@
+import { element, by, ElementFinder } from 'protractor';
+
+export class ClickdocSearchpage {
+
+  public areaOption: ElementFinder;
+  public areaResult: ElementFinder;
+  public areaResultContainer: ElementFinder;
+  public areaResultContainerItemHeader: ElementFinder;
+  public areaResultContainerItemPracticeInfo: ElementFinder;
+  public areaResultContainerItemPracticeInfoTitel: ElementFinder;
+  public areaResultContainerItemServiceVideo: ElementFinder;
+  public areaResultContainerItemAppointment: ElementFinder;
+  public areaResultContainerItemTerminBtn: ElementFinder;
+  public areaResultContainerLoadMoreLink: ElementFinder;
+  public inputName: ElementFinder;
+  public inputLokation: ElementFinder;
+  public inputLokationFirsSuggestion: ElementFinder;
+  public checkboxOnlineTermin: ElementFinder;
+  public checkboxOnlineTerminDay: ElementFinder;
+  public checkboxOnlineTerminTime: ElementFinder;
+  public checkboxVideoSprechstunde: ElementFinder;
+  public checkboxBarrierefreiheit: ElementFinder;
+  public btnSuchen: ElementFinder;
+  public radiobtnBesteErgebnisse: ElementFinder;
+  public radiobtnBesteErgebnisseLabel: ElementFinder;
+  public radiobtnAlphabetisch: ElementFinder;
+  public radiobtnAlphabetischAUFsteigend: ElementFinder;
+  public radiobtnAlphabetischABsteigend: ElementFinder;
+  public radiobtnEntfernung: ElementFinder;
+  public radiobtnEnfernungSlider: ElementFinder;
+  public radiobtnEntfernung1KM: ElementFinder;
+  public radiobtnEntfernung20KM: ElementFinder;
+  public radiobtnEntfernung50KM: ElementFinder;
+  public radiobtnEntfernung100KM: ElementFinder;
+  public radiobtnEntfernung200KM: ElementFinder;
+  public radiobtnEntfernung200KMPlus: ElementFinder;
+  public initialMessageResultArea: ElementFinder;
+  public inputNameDropdownItem: ElementFinder;
+  public nameDoctor: ElementFinder;
+  public nameAA: ElementFinder;
+
+  constructor() {
+  this.areaOption = element(by.css("div.col-md-4:nth-child(3)"));
+  this.areaResult = element(by.css("div.col-sm-12:nth-child(4)"));
+  this.areaResultContainer = element(by.css("app-contact-card.ng-star-inserted"));
+  this.areaResultContainerItemHeader = element(by.xpath("//app-contact-card[1]//app-contact-header[@class='ng-star-inserted']"));
+  this.areaResultContainerItemPracticeInfo = element(by.xpath("//app-contact-card[1]//div[@class='about-container']"));
+  this.areaResultContainerItemPracticeInfoTitel = element(by.xpath("//app-contact-card[1]//div[@class='about-container']//h4[contains(text(),'Name der Gesundheitseinrichtung')]"));
+  this.areaResultContainerItemServiceVideo = element(by.xpath("//app-profile-field//span[contains(text(),' Videosprechstunde')]"));
+  this.areaResultContainerItemAppointment = element(by.xpath("//app-contact-card[1]//app-contact-slots-details"));
+  this.areaResultContainerItemTerminBtn = element(by.xpath("//app-contact-card//app-contact-button-container"));
+  this.areaResultContainerLoadMoreLink = element(by.xpath("//a[@class='load-more-link']"));
+  this.inputName = element(by.css('#search-query-typeahead'));
+  this.inputLokation = element(by.css("#search-location-typeahead"));
+  this.inputLokationFirsSuggestion = element(by.css('button.dropdown-item:nth-child(2)'));
+  this.checkboxOnlineTermin = element(by.xpath("//span[@id='onlineAppointmentsIcon']/following::span[1]"));
+  this.checkboxOnlineTerminDay = element(by.css(".day > button"));
+  this.checkboxOnlineTerminTime = element(by.css(".time > button"));
+  this.checkboxVideoSprechstunde = element(by.xpath("//input[@id='videoCall']/following::label[@for='videoCall']"));
+  this.checkboxBarrierefreiheit = element(by.xpath("//span[@translate='search.filter.checkbox.accessibility']"));
+  this.btnSuchen = element(by.xpath("//button[@class='btn btn-primary btn-block']"));
+  this.radiobtnBesteErgebnisse = element(by.css("#bestHit"));
+  this.radiobtnBesteErgebnisseLabel = element(by.xpath("//label[contains(.,'Beste Ergebnisse')]"));
+  this.radiobtnAlphabetisch = element(by.xpath("//div[@class='container sort-container']//div[@class='row sort-section' and position()=2]"));
+  this.radiobtnAlphabetischAUFsteigend = element(by.css("#ascending"));
+  this.radiobtnAlphabetischABsteigend = element(by.css("#descending"));
+  this.radiobtnEntfernung = element(by.css("#noLocation"));
+  this.radiobtnEnfernungSlider = element(by.css("span.ng5-slider-span:nth-child(3) > span"));
+  this.radiobtnEntfernung1KM = element(by.css("span.ng5-slider-tick:nth-child(1)"));
+  this.radiobtnEntfernung20KM = element(by.css("span.ng5-slider-span:nth-child(2)"));
+  this.radiobtnEntfernung50KM = element(by.css("span.ng5-slider-tick:nth-child(3)"));
+  this.radiobtnEntfernung100KM = element(by.css("span.ng5-slider-tick:nth-child(4)"));
+  this.radiobtnEntfernung200KM = element(by.css("span.ng5-slider-tick:nth-child(5)"));
+  this.radiobtnEntfernung200KMPlus = element(by.css("span.ng5-slider-tick:nth-child(6)"));
+  this.initialMessageResultArea = element(by.css(".card-title > span"));
+  this.inputNameDropdownItem = element(by.xpath("//span[@class='dropdown-item-inner']"));
+  this.nameDoctor = element(by.xpath("//div[@class='contact-header-container']//h2"));
+  this.nameAA = element(by.xpath("//h2[contains(text(),'A Aa')]"));
+  }
+
+}
